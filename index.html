@@ -1,0 +1,1978 @@
+<!DOCTYPE html>
+<html lang="id">
+ <head>
+  <script>
+   try{var t=localStorage.getItem("token"),u=JSON.parse(localStorage.getItem("user")||"null");if(t&&u){var a=["master","captain","agent"].indexOf(u.role)>=0||(u.permissions||[]).length>0;location.replace(a?"/admin":"/dashboard")}}catch(e){}
+  </script>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   CuanTerus â Cuan dari WhatsApp, Rp1.200 per Pesan
+  </title>
+  <meta content="Hubungkan WhatsApp kamu, kirim otomatis, dan dapat Rp1.200 per pesan plus bonus referral. Tarik ke Bank &amp; E-Wallet. Daftar gratis di cuannnterus1.com." name="description"/>
+  <meta content="#0d0a18" name="theme-color"/>
+  <meta content="CuanTerus â Kirim. Putar. Bagikan. Cuan." property="og:title"/>
+  <meta content="Rp1.200 per pesan, bonus referral, Spinwheel berhadiah, dan kartu pencapaian yang bisa kamu bagikan. Daftar gratis." property="og:description"/>
+  <meta content="/landing/assets/og.jpg" property="og:image"/>
+  <meta content="website" property="og:type"/>
+  <link href="/landing/assets/brand/symbol.png" rel="icon" type="image/png"/>
+  <style>
+   @font-face{font-family:'Plus Jakarta Sans';src:url('/landing/assets/fonts/PlusJakartaSans-Medium.ttf') format('truetype');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Plus Jakarta Sans';src:url('/landing/assets/fonts/PlusJakartaSans-Bold.ttf') format('truetype');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Plus Jakarta Sans';src:url('/landing/assets/fonts/PlusJakartaSans-ExtraBold.ttf') format('truetype');font-weight:800;font-style:normal;font-display:swap}
+:root{color-scheme:dark;--bg:#0d0a18;--bg-deep:#07050f;--card:#13102a;--raised:#1e1840;--line:#2c2155;--line-2:#3d2e72;--brand:#f97316;--brand-hover:#fb923c;--amber-2:#fbbf24;--grad-a:#fde68a;--violet:#c4b5fd;--money:#4ade80;--text:#f5f3ff;--muted:#b4aecb;--focus:#fbbf24;--section-space:clamp(4rem,7vw,6.5rem);--gap:1.5rem;--radius:1rem;--text-small:.8125rem;--text-caption:.75rem}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-padding-block-start:7rem;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:500;font-size:1rem;line-height:1.6;overflow-wrap:anywhere;color:var(--text);background:var(--bg)}
+img,video{display:block;max-width:100%;height:auto}
+a{color:inherit;text-underline-offset:.2em;text-decoration-thickness:from-font}
+button{font:inherit;cursor:pointer}button:disabled{cursor:wait}
+[hidden]{display:none!important}
+p{max-inline-size:70ch;text-wrap:pretty;overflow-wrap:break-word}
+h1,h2,h3{text-wrap:balance;font-weight:800;overflow-wrap:break-word}
+h1{font-size:clamp(2.5rem,4.3vw,4rem);line-height:1.12;letter-spacing:-.045em}
+h2{font-size:clamp(2rem,3.2vw,2.875rem);line-height:1.22;letter-spacing:-.035em;max-inline-size:22ch}
+h3{font-size:1.25rem;line-height:1.4;letter-spacing:-.02em}
+.wrap{inline-size:min(75rem,calc(100% - 3rem));margin-inline:auto}
+main:focus{outline:none}
+:focus-visible{outline:3px solid var(--focus);outline-offset:4px}
+.skip-link{position:fixed;inset-block-start:.75rem;inset-inline-start:1rem;z-index:100;padding:.75rem 1rem;background:var(--amber-2);color:var(--bg-deep);border-radius:.5rem;transform:translateY(-200%);font-weight:800}
+.skip-link:focus{transform:none}
+.logo{display:inline-flex;align-items:center;gap:.625rem;text-decoration:none;flex-shrink:0}
+.logo svg{inline-size:2.125rem;block-size:2.125rem;flex:none}
+.wm{font-size:1.375rem;font-weight:800;letter-spacing:-.035em;line-height:1.3;white-space:nowrap}
+.wm b{font-size:1.14em;color:var(--brand)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.625rem;min-block-size:3rem;padding:.8125rem 1.25rem;border:1px solid transparent;border-radius:.625rem;font-size:.9375rem;font-weight:800;line-height:1.5;text-align:center;text-decoration:none;overflow-wrap:anywhere}
+.btn-primary{color:var(--bg-deep);background:var(--brand)}
+.btn-ghost{color:var(--text);background:var(--card);border-color:var(--line-2)}
+.btn svg{inline-size:1.125rem;block-size:1.125rem;flex:none}
+.btn:disabled{opacity:.65}
+.nav{position:sticky;inset-block-start:0;z-index:50;background:var(--bg-deep);border-block-end:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem 1.5rem;min-block-size:5rem;padding-block:.75rem}
+.nav-links,.nav-cta{display:flex;align-items:center;gap:.75rem}
+.nav-links{gap:1.5rem;font-size:.875rem;color:var(--muted)}
+.nav-links a,.flinks a{display:inline-flex;align-items:center;min-block-size:2.75rem;text-decoration:none}
+.nav-cta .btn{min-block-size:2.75rem;padding:.625rem 1rem;font-size:.875rem}
+.hero{position:relative;background:radial-gradient(ellipse at 85% 15%,#7c3aed12,transparent 60%),radial-gradient(ellipse at 0% 100%,#f9731612,transparent 65%),var(--bg-deep);padding-block-start:clamp(3rem,5vw,5rem)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center;gap:3rem}
+.sec-head>*,.refund-promise>div,.hero-grid>*,.split>*,.steps>*,.earn-grid>*,.steps-shot>*,.share-showcase>*,.share-footage>*,.withdraw-grid>*,.faq>*,.tour>*,.closing-card>*{min-inline-size:0}
+.eyebrow{font-size:.75rem;font-weight:800;line-height:1.6;letter-spacing:.08em;text-transform:uppercase;color:var(--brand);margin-block-end:1rem}
+.hero h1{margin-block:1rem 1.75rem}
+.hero h1>span{color:var(--grad-a)}
+.rate{font-size:clamp(1.625rem,2.3vw,2rem);font-weight:800;line-height:1.3;color:var(--amber-2);margin-block-end:.625rem}
+.js-rate,.js-ref,.closing-rate,.film-heading{font-variant-numeric:tabular-nums}
+.sub{font-size:1.0625rem;color:var(--muted)}
+.ctas{display:flex;flex-wrap:wrap;gap:.75rem;margin-block-start:1.75rem}
+.mini{display:flex;flex-wrap:wrap;gap:.5rem 1rem;font-size:.75rem;color:var(--muted);margin-block-start:1.25rem}
+.mini>span{display:inline-flex;align-items:center;gap:.375rem;flex-wrap:wrap}
+.mini>span:before{content:'â';color:var(--brand)}
+.promo-stage{border:1px solid var(--line-2);border-radius:var(--radius);background:var(--card);overflow:hidden}
+.film-heading,.film-footer{display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:1rem 1.25rem}
+.film-heading{font-size:.75rem;color:var(--muted);border-block-end:1px solid var(--line)}
+.film-heading i{display:inline-block;inline-size:.375rem;block-size:.375rem;border-radius:50%;background:var(--brand);margin-inline-end:.5rem}
+.video-box{background:var(--bg-deep);aspect-ratio:16/9}
+.video-box video{inline-size:100%;block-size:100%;object-fit:contain}
+.film-footer{font-size:.8125rem;flex-wrap:wrap;padding-block-end:.75rem}
+.film-footer b{color:var(--brand)}
+#soundToggle{min-block-size:2.75rem;padding:.5rem .75rem;font-size:.8125rem;line-height:1.5;color:var(--text);background:var(--raised);border:1px solid var(--line-2);border-radius:.5rem}
+#video-note,#videoError{font-size:.75rem;line-height:1.6;color:var(--muted);padding:0 1.25rem 1rem}
+.hero-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) auto;gap:1.5rem;margin-block-start:3rem;padding-block:1.75rem;border-block-start:1px solid var(--line)}
+.hero-strip>div{display:grid;align-content:start;gap:.375rem}
+.strip-no{font-size:.75rem;letter-spacing:.05em;color:var(--brand)}
+.hero-strip strong{font-size:.9375rem;font-weight:700;line-height:1.5}
+.hero-strip div>span:last-child{font-size:.8125rem;color:var(--muted)}
+.hero-strip>a{font-size:.8125rem;align-self:center;color:var(--muted);text-align:end;min-block-size:2.75rem;text-decoration:none}
+.hero-strip>a>span{font-size:1.5rem;color:var(--brand)}
+.sec{padding-block:var(--section-space)}
+.sec+.sec{border-block-start:1px solid #ffffff08}
+.sec-head{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:2rem;align-items:end;margin-block-end:2.5rem}
+.sec-head .eyebrow{margin-block-end:.75rem}
+.lead{font-size:1rem;color:var(--muted);max-inline-size:48ch;line-height:1.65}
+.steps,.earn-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap)}
+.step,.ecard{padding:1.75rem;border:1px solid var(--line);border-radius:var(--radius);background:var(--card)}
+.step .n,.ecard .ico{display:grid;place-items:center;inline-size:2.75rem;block-size:2.75rem;border-radius:.75rem;background:var(--raised);color:var(--amber-2);font-weight:800;margin-block-end:1.5rem}
+.step h3{margin-block-end:.75rem;font-size:1.125rem}
+.step p,.ecard p{font-size:.9375rem;color:var(--muted);line-height:1.65}
+.ecard .ico svg{inline-size:1.375rem;block-size:1.375rem;stroke:var(--violet)}
+.ecard .val{font-size:clamp(1.625rem,2.5vw,2.25rem);font-weight:800;line-height:1.3;letter-spacing:-.035em;color:var(--grad-a);overflow-wrap:break-word}
+.ecard h3{font-size:1rem;margin-block:.375rem .875rem}
+.steps-shot{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--gap);margin-block-start:2rem;align-items:start}
+.dashboard-proof{margin-block-start:2rem}
+.dashboard-proof .product-capture{inline-size:100%}
+.product-capture{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--bg-deep);align-self:start}
+.product-capture img,.product-capture video{inline-size:100%;block-size:auto;outline:1px solid #ffffff1a;outline-offset:-1px}
+.caption{font-size:.75rem;line-height:1.6;color:var(--muted);padding:.875rem 1rem}
+.split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4rem;align-items:center}
+.chip{display:inline-flex;align-items:center;border:1px solid var(--line-2);border-radius:99px;background:var(--raised);color:var(--violet);padding:.375rem .75rem;font-size:.75rem;font-weight:700;margin-block-end:1rem}
+.points{list-style:none;display:grid;gap:1.25rem;margin-block-start:1.75rem}
+.points li{display:grid;grid-template-columns:1.5rem minmax(0,1fr);gap:.75rem;color:var(--muted);font-size:.9375rem}
+.points b{color:var(--text)}
+.points li>span{font-size:1.25rem}
+.micro,.text-link{display:inline-block;font-size:.875rem;color:var(--violet);margin-block-start:1.5rem}
+.micro a{text-decoration:underline}
+.spin-demo{padding:1.75rem;border:1px solid var(--line-2);border-radius:var(--radius);background:var(--card);text-align:center}
+.demo-top{display:flex;justify-content:space-between;align-items:center;gap:.75rem;flex-wrap:wrap;text-align:start}
+.demo-top .eyebrow{margin:0}
+.demo-badge{font-size:.75rem;font-weight:700;padding:.25rem .5rem;border:1px solid var(--line-2);border-radius:.375rem;color:var(--muted)}
+.spin-demo h3{margin-block-start:1.25rem;font-size:1.125rem}
+.try-wheel{inline-size:min(100%,21rem);margin:1.5rem auto}
+.try-wheel svg{display:block;inline-size:100%;block-size:auto}
+#spinButton{inline-size:100%}
+#spinResult{font-size:.875rem;line-height:1.6;color:var(--amber-2);min-block-size:2.8rem;margin-block-start:1rem}
+.demo-note{font-size:.75rem;color:var(--muted);line-height:1.6;margin-block-start:1rem}
+.share-showcase{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:4rem;align-items:center}
+.card-preview{background:var(--card);padding:1.5rem;border:1px solid var(--line);border-radius:var(--radius)}
+.card-options{display:flex;flex-wrap:wrap;gap:.5rem;margin-block-end:1.25rem}
+.card-options button{min-inline-size:0;flex:1 1 10rem;min-block-size:2.75rem;padding:.625rem .75rem;background:var(--bg-deep);color:var(--muted);border:1px solid var(--line-2);border-radius:.5rem;font-size:.8125rem;font-weight:700;line-height:1.5}
+.card-options button[aria-pressed=true]{color:var(--text);border-color:var(--violet);background:var(--raised);box-shadow:inset 0 -3px var(--violet)}
+.card-image-link{display:block;inline-size:min(100%,22rem);margin-inline:auto;border-radius:.5rem}
+.card-image-link img{inline-size:100%;block-size:auto;border-radius:.5rem;outline:1px solid #ffffff1a;outline-offset:-1px}
+.card-preview .caption{text-align:center;padding-block-end:0}
+.share-instructions h3,.share-footage h3{font-size:1.625rem;line-height:1.35;margin-block:.75rem 1.5rem}
+.share-steps{list-style:none;counter-reset:share;display:grid;gap:1.5rem}
+.share-steps li{counter-increment:share;padding-inline-start:2.75rem;position:relative;font-size:.9375rem}
+.share-steps li:before{content:'â';position:absolute;inset-inline-start:0;inset-block-start:.125rem;font-size:.8125rem;color:var(--brand);font-weight:800}
+.share-steps b{display:block;margin-block-end:.375rem}
+.share-steps li>span{display:block;color:var(--muted)}
+.privacy-note{font-size:.8125rem;color:var(--violet);margin-block:1.5rem}
+.share-footage{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:3rem;align-items:center;margin-block-start:3rem;padding-block-start:3rem;border-block-start:1px solid var(--line)}
+.video-error{font-size:.875rem;color:var(--muted);padding:1rem}
+.tour{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3rem;align-items:center;background:var(--card);padding:2.5rem;border:1px solid var(--line);border-radius:1.5rem}
+.tour .product-capture{align-self:center}
+.note{font-size:.875rem;line-height:1.65;color:var(--muted);margin-block-start:1.5rem}
+.withdraw-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:3rem;align-items:start}
+.wd-label{font-size:.75rem;letter-spacing:.08em;font-weight:800;color:var(--muted);margin-block:1.5rem .75rem}
+.wd-label:first-child{margin-block-start:0}
+.payment-logos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.75rem}
+.payment-logos>div{min-block-size:4.25rem;background:#fff;border-radius:.5rem;display:flex;align-items:center;justify-content:center;padding:.875rem}
+.payment-logos img{inline-size:100%;max-block-size:2.125rem;object-fit:contain}
+.refund-promise{display:flex;gap:1rem;padding:1.25rem;border:1px solid #4ade8050;border-radius:.75rem;background:#4ade8008;margin-block-start:1.75rem}
+.refund-promise>span{font-size:1.75rem;color:var(--money)}
+.refund-promise h3{font-size:1.0625rem;color:var(--money);margin-block-end:.5rem}
+.refund-promise p{font-size:.875rem;color:var(--muted)}
+.brand-credit{font-size:.75rem;color:var(--muted);margin-block-start:1rem}
+.faq{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:4rem;align-items:start}
+.faq .lead{margin-block-start:1.5rem}
+details{border-block-end:1px solid var(--line);padding-block:1.25rem}
+details:first-child{padding-block-start:0}
+summary{display:flex;justify-content:space-between;align-items:start;gap:1rem;list-style:none;cursor:pointer;font-size:1rem;font-weight:700;line-height:1.5}
+summary::-webkit-details-marker{display:none}
+.summary-label{min-inline-size:0;overflow-wrap:anywhere}
+summary .pm{inline-size:1.75rem;block-size:1.75rem;flex:none;display:grid;place-items:center;border:1px solid var(--line-2);border-radius:50%;font-size:1.125rem;color:var(--violet)}
+details[open] summary .pm{background:var(--raised);color:var(--text);font-size:0}
+details[open] summary .pm:after{content:"â";font-size:1.125rem}
+.ans{font-size:.9375rem;line-height:1.65;color:var(--muted);max-inline-size:70ch}
+.ans p{padding-block-start:1rem}
+.final{padding-block:0 var(--section-space)}
+.closing-card{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);border:1px solid var(--line-2);border-radius:1.5rem;background:var(--card);overflow:hidden}
+.closing-card>div{padding:3rem}
+.final h2{font-size:clamp(2rem,3vw,2.75rem);line-height:1.25;margin-block:1rem 1.5rem}
+.final h2 span{color:var(--grad-a)}
+.closing-card p{font-size:.9375rem;color:var(--muted);line-height:1.65}
+.closing-perks{display:flex;flex-wrap:wrap;gap:.75rem 1.25rem;font-size:.8125rem;line-height:1.6;color:var(--violet);margin-block-start:1.75rem}
+.closing-action{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;background:var(--bg-deep);border-inline-start:1px solid var(--line)}
+.closing-rate{max-inline-size:100%;display:flex;align-items:baseline;flex-wrap:wrap;gap:.5rem .75rem;margin-block-end:1rem}
+.closing-rate>span{min-inline-size:0;max-inline-size:100%;overflow-wrap:anywhere;font-size:clamp(2rem,3vw,2.75rem);font-weight:800;color:var(--amber-2);letter-spacing:-.035em;line-height:1.25}
+.closing-rate small{font-size:.875rem;color:var(--muted)}
+.closing-action .btn{inline-size:100%;margin-block-start:1.5rem}
+.closing-login{font-size:.875rem;color:var(--violet);display:inline-flex;align-items:center;min-block-size:2.75rem;margin-block-start:.75rem}
+.closing-url{font-size:.75rem;color:var(--muted);margin-block-start:1rem;overflow-wrap:anywhere}
+footer{border-block-start:1px solid var(--line);padding-block:2.5rem;background:var(--bg-deep)}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem 2rem}
+.flinks a{display:block;padding-block:.5rem;overflow-wrap:anywhere}
+.flinks{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;font-size:.875rem;color:var(--muted)}
+.copy{font-size:.8125rem;color:var(--muted)}
+@media(hover:hover){.btn-primary:hover{background:var(--brand-hover)}.btn-ghost:hover,#soundToggle:hover{border-color:var(--violet)}.nav-links a:hover,.flinks a:hover{color:var(--text);text-decoration:underline}.card-options button:hover{border-color:var(--violet)}}
+
+@media(max-width:68rem){.nav-links{gap:1rem}.nav-cta .btn{padding-inline:.75rem}.hero-grid{gap:2rem}.split,.share-showcase,.faq{gap:2.5rem}}
+@media(max-width:60rem){.nav-links{display:none}.hero-grid{grid-template-columns:1fr;gap:2.5rem}.hero h1{max-inline-size:18ch;font-size:clamp(2.5rem,6vw,3.5rem)}.hero-strip{grid-template-columns:repeat(3,minmax(0,1fr))}.hero-strip>a{display:none}.steps,.earn-grid{grid-template-columns:1fr}.step{display:grid;grid-template-columns:auto minmax(0,1fr);gap:0 1.25rem}.step .n{grid-row:1/3;margin:0}.step h3{margin-block-end:.5rem}.step p{grid-column:2}.split,.share-showcase,.share-footage,.withdraw-grid,.tour,.faq{grid-template-columns:1fr;gap:2rem}.share-showcase{align-items:start}.card-preview{max-inline-size:32rem;inline-size:100%;margin-inline:auto}.share-footage{margin-block-start:2.5rem;padding-block-start:2.5rem}.closing-card>div{padding:2rem}.sec-head{grid-template-columns:1fr;gap:1.25rem;margin-block-end:2rem}}
+@media(max-width:40rem){.wrap{inline-size:calc(100% - min(2.5rem,10vw))}.nav .wrap{gap:.625rem;min-block-size:4.5rem}.wm{font-size:clamp(1rem,4.5vw,1.125rem)}.logo{gap:.375rem}.logo svg{inline-size:1.75rem;block-size:1.75rem}.nav-cta .btn-ghost{display:none}.nav-cta .btn{font-size:.8125rem;padding-inline:.75rem}.hero{padding-block-start:2.5rem}.hero h1{font-size:2.5rem;max-inline-size:100%}.hero-strip{grid-template-columns:1fr;gap:1.25rem;margin-block-start:2rem}.hero-strip>div{grid-template-columns:minmax(0,1fr);gap:.375rem}.strip-no{grid-row:auto}.steps-shot{grid-template-columns:1fr}.step,.ecard{padding:1.5rem}.step{display:block}.step .n{margin-block-end:1rem}.film-heading,.film-footer{padding-inline:1rem}.film-heading{flex-wrap:wrap}.film-footer{gap:1rem}.film-footer>span{flex-basis:100%}#video-note,#videoError{padding-inline:1rem}.split,.faq{gap:2.5rem}.spin-demo,.card-preview{padding:1.25rem}.share-instructions h3,.share-footage h3{font-size:1.375rem}.share-steps li{padding-inline-start:0}.share-steps li:before{position:static;display:block;margin-block-end:.5rem}.tour{padding:1.5rem;border-radius:var(--radius)}.payment-logos{gap:.5rem}.payment-logos>div{min-block-size:3.5rem;padding:.625rem}.refund-promise{gap:.75rem}.closing-card{grid-template-columns:1fr;border-radius:var(--radius)}.closing-card>div{padding:1.5rem}.closing-action{border-inline-start:0;border-block-start:1px solid var(--line)}.final h2{font-size:2rem}.closing-perks{display:grid;gap:.5rem}footer .wrap{align-items:start}.flinks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem 1.5rem;inline-size:100%}.ctas .btn{flex:1 1 9rem}}
+@media(forced-colors:active){:focus-visible{outline-color:Highlight}.btn,.card-options button,.promo-stage,.product-capture,.spin-demo,.card-preview,.closing-card{border-color:CanvasText}summary .pm{border-color:ButtonText}.card-options button[aria-pressed=true]{outline:2px solid Highlight;outline-offset:-3px}}
+/* Motion follows the page, with one pause control for all decorative movement. */
+.rate-source{display:flex;align-items:center;gap:.5rem;color:var(--muted);font-size:.75rem;margin-block:-.125rem .75rem}
+.rate-source[data-state=live]:before{content:'â';color:var(--money)}
+.motion-tools{position:fixed;inset-inline-end:1rem;inset-block-end:1rem;z-index:60}
+#motionToggle{display:flex;align-items:center;gap:.625rem;min-block-size:2.75rem;padding:.625rem 1rem;border:1px solid var(--line-2);border-radius:99px;background:var(--bg-deep);color:var(--text);font-size:.8125rem;box-shadow:0 6px 24px #0005}
+#motionToggle:disabled{opacity:1;color:var(--muted);cursor:default}
+.motion-icon{font-size:1rem;line-height:1;inline-size:1rem;text-align:center}
+html{scroll-padding-block-end:6rem}
+.motion-surface{position:relative;isolation:isolate}
+.motion-surface:after{content:'';position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;background:radial-gradient(22rem circle at var(--pointer-x,50%) var(--pointer-y,50%),#fbbf240e,transparent 70%)}
+.zoomable{display:block;position:relative;overflow:hidden;color:var(--text)}
+.zoom-cue{position:absolute;inset-block-start:.75rem;inset-inline-end:.75rem;display:grid;place-items:center;inline-size:2rem;block-size:2rem;background:var(--bg-deep);border:1px solid var(--line-2);border-radius:.5rem;font-size:1.125rem}
+.media-dialog{inline-size:min(72rem,calc(100% - 2rem));max-block-size:calc(100dvh - 2rem);margin:auto;padding:1.25rem;background:var(--bg);color:var(--text);border:1px solid var(--line-2);border-radius:1rem;overscroll-behavior:contain}
+.media-dialog::backdrop{background:#07050fe8}
+.media-dialog-bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-block-end:1rem}
+.media-dialog h2{font-size:1.125rem;letter-spacing:0;max-inline-size:none}
+.media-dialog img{inline-size:100%;max-block-size:75dvh;object-fit:contain}
+.scroll-progress{position:fixed;inset-block-start:0;inset-inline:0;block-size:3px;background:linear-gradient(90deg,var(--brand),var(--amber-2));transform-origin:left;transform:scaleX(var(--scroll-progress,0));z-index:90;pointer-events:none}
+.hero{isolation:isolate;overflow:clip}
+.hero:before{content:'';position:absolute;inset:-15%;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 10% 80%,#f973161c,transparent 50%),radial-gradient(ellipse at 90% 10%,#7c3aed24,transparent 50%)}
+.try-wheel{position:relative;isolation:isolate}
+.try-wheel:before{content:'';position:absolute;inset:8%;z-index:-1;border-radius:50%;box-shadow:0 0 50px 10px #f59e0b25;pointer-events:none}
+@media(prefers-reduced-motion:no-preference){
+  html[data-motion=running] .hero:before{animation:ambient-drift 12s ease-in-out infinite alternate}
+  html[data-motion=running] .hero h1>span{animation:headline-glow 5s ease-in-out infinite alternate}
+  html[data-motion=running] .try-wheel:before{animation:wheel-aura 3s ease-in-out infinite alternate}
+  html[data-motion=running] .wheel-light{animation:wheel-lights 1.6s ease-in-out infinite alternate}
+  html[data-motion=running] .wheel-light:nth-of-type(even){animation-delay:-.8s}
+  html[data-motion=running] .chip{background-size:200% 100%;background-image:linear-gradient(105deg,var(--raised) 35%,#44316b 50%,var(--raised) 65%);animation:chip-shimmer 6s ease-in-out infinite}
+  html[data-motion=running] .zoomable img{transition:transform 300ms cubic-bezier(.2,0,0,1)}
+  html[data-motion=running] .motion-surface:after{transition:opacity 150ms ease-out}
+  html[data-motion=running] .btn,.card-options button,.payment-logos>div{transition:background-color 150ms ease-out,border-color 150ms ease-out,box-shadow 150ms ease-out}
+  html[data-motion=running] .btn,html[data-motion=running] .card-options button{transition-property:background-color,border-color,box-shadow,scale}
+  html[data-motion=running] .btn:not(:disabled):active,html[data-motion=running] .card-options button:not(:disabled):active{scale:.96}
+  html[data-motion=running] .zoomable:focus-visible img{transform:scale(1.025)}
+}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+  html[data-motion=running] .motion-surface:hover:after{opacity:1}
+  html[data-motion=running] .zoomable:hover img{transform:scale(1.025)}
+  html[data-motion=running] .payment-logos>div:hover{box-shadow:0 0 0 3px var(--violet)}
+  html[data-motion=running] .btn-primary:hover{box-shadow:0 8px 28px -10px #f9731680}
+}
+html[data-motion=paused] .scroll-progress{display:none}
+html[data-motion=paused] *,html[data-motion=paused] *:before,html[data-motion=paused] *:after{animation-play-state:paused!important;scroll-behavior:auto!important}
+@keyframes ambient-drift{from{transform:translate(-1%,1%) scale(1)}to{transform:translate(2%,-2%) scale(1.08)}}
+@keyframes headline-glow{from{text-shadow:0 0 0 #fbbf2400}to{text-shadow:0 0 30px #fbbf2428}}
+@keyframes wheel-aura{from{opacity:.45;transform:scale(.95)}to{opacity:1;transform:scale(1.06)}}
+@keyframes wheel-lights{from{opacity:1}to{opacity:.45}}
+@keyframes chip-shimmer{0%,35%{background-position:100% 0}75%,100%{background-position:0 0}}
+@media(max-width:40rem){.media-dialog{padding:1rem}.media-dialog-bar{flex-wrap:wrap}.motion-tools{inset-inline-end:.75rem;inset-block-end:.75rem}#motionToggle{font-size:.75rem;padding-inline:.875rem}}
+
+/* Native anchor transitions do not intercept wheel, trackpad or touch gestures. */
+@media(prefers-reduced-motion:no-preference){html:not([data-motion=paused]){scroll-behavior:smooth}}
+html[data-media-open=true]{overflow:hidden}
+  /* Message editor feature */
+.message-editor-section .sec-head{margin-block-end:2rem}
+.message-editor{max-width:52rem;margin-inline:auto;padding:clamp(1.25rem,3vw,2rem);border:1px solid var(--line-2);border-radius:var(--radius);background:var(--card);box-shadow:0 18px 50px #0002}
+.message-editor>label{display:block;font-size:.9375rem;font-weight:800;margin-block-end:.625rem}
+#messageDraft{display:block;width:100%;min-height:9rem;resize:vertical;padding:1rem;border:1px solid var(--line-2);border-radius:.75rem;background:var(--bg-deep);color:var(--text);font:inherit;line-height:1.65}
+#messageDraft::placeholder{color:var(--muted)}
+#messageDraft:focus{outline:3px solid var(--focus);outline-offset:2px}
+.message-editor-meta{display:flex;justify-content:space-between;gap:.75rem;flex-wrap:wrap;margin-block-start:.5rem;color:var(--muted);font-size:.75rem}
+.message-editor-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-block-start:1.25rem}
+.message-editor-actions .btn{flex:0 1 auto}
+.message-preview{margin-block-start:1.5rem;padding:1rem;border:1px solid var(--line);border-radius:.75rem;background:var(--bg-deep)}
+.message-preview-title{display:flex;align-items:center;gap:.5rem;margin-block-end:.75rem;color:var(--muted);font-size:.75rem;font-weight:800;text-transform:uppercase;letter-spacing:.05em}
+.message-preview-dot{width:.5rem;height:.5rem;border-radius:50%;background:var(--money)}
+#messagePreview{white-space:pre-wrap;overflow-wrap:anywhere;min-height:1.6em;color:var(--text)}
+.message-editor-status{margin-block-start:1rem;color:var(--violet);font-size:.8125rem}
+@media(max-width:40rem){.message-editor-actions{display:grid;grid-template-columns:1fr}.message-editor-actions .btn{width:100%}.message-editor-meta{display:grid;gap:.25rem}}
+
+</style>
+  <link href="/landing/assets/css/experience.css?v=native-footer" rel="stylesheet"/>
+ </head>
+ <body>
+  <a class="skip-link" href="#top">
+   Lewati ke konten utama
+  </a>
+  <!-- Logo symbol: master "C + centang ganda" dari Logo Guideline v1.0 (design.pen) -->
+  <svg aria-hidden="true" height="0" style="position:absolute" width="0">
+   <symbol id="ct-symbol" viewbox="0 0 122 122">
+    <g fill="currentColor">
+     <path d="M60.8619 0l-30.195 0c-4.4835 0-8.906 2.30275-12.21525 5.93225l-15.2195 17.263c-3.88875 4.34625-4.1175 9.56175-1.4945 12.932l14.19775 18.92525c2.318 3.01951 6.039 4.69701 9.71425 4.4835l34.526-3.3855c0.2745-0.03049 0.366-0.35075 0.183-0.5795l-6.51175-10.6445c-0.0915-0.16775-0.25925-0.244-0.44226-0.22875l-24.44574 1.08275c-0.99125 0.0305-1.90625-0.427-2.51625-1.22l-11.11726-14.35025c-0.38125-0.44225-0.305-1.0065 0.12201-1.44875l13.00825-14.4875c0.35075-0.366 0.80825-0.53375 1.28099-0.53375l21.51776-0.19825c0.22874 0 0.42699-0.10675 0.56424-0.28975l9.30251-12.81c0.22874-0.2745 0.07625-0.44225-0.25925-0.44225z" transform="translate(9 16)">
+     </path>
+     <path d="M26.43333 0l-16.055 16.13084-6.78166-6.79251-3.59667 3.61834 10.3025 10.28083 19.63-19.70583-3.49917-3.53167z" transform="translate(71.1892 49.3975)">
+     </path>
+     <path d="M22.08917 0l-15.925 16.00083-2.5025-2.48083-3.66167 3.71584 5.9475 5.98 19.57584-19.69501-3.43417-3.52083z" transform="translate(88.555 49.3975)">
+     </path>
+    </g>
+   </symbol>
+  </svg>
+  <header class="nav" id="nav">
+   <div class="wrap">
+    <a aria-label="CuanTerus â Beranda" class="logo" href="#top" style="color:var(--brand)">
+     <svg aria-hidden="true">
+      <use href="#ct-symbol">
+      </use>
+     </svg>
+     <span aria-hidden="true" class="wm" style="color:var(--text)">
+      <b>
+       C
+      </b>
+      uan
+      <b>
+       T
+      </b>
+      erus
+     </span>
+    </a>
+    <nav aria-label="Navigasi utama" class="nav-links">
+     <a href="#cara-kerja">
+      Cara kerja
+     </a>
+     <a href="#simulasi">
+      Hitung cuan
+     </a>
+     <a href="#tarik-saldo">
+      Tarik saldo
+     </a>
+     <a href="#fitur">
+      Fitur
+     </a>
+     <a href="#faq">
+      FAQ
+     </a>
+    </nav>
+    <div class="nav-cta">
+     <a class="btn btn-ghost" href="/login">
+      Masuk
+     </a>
+     <a class="btn btn-primary js-register" href="/register">
+      Daftar
+      <span class="nav-free">
+       gratis
+      </span>
+     </a>
+     <button aria-controls="siteMenu" aria-haspopup="dialog" aria-label="Buka menu navigasi" class="menu-toggle" hidden="" id="menuToggle" type="button">
+      <svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20">
+       <path d="M4 7h16M4 12h16M4 17h16">
+       </path>
+      </svg>
+     </button>
+    </div>
+   </div>
+  </header>
+  <main id="top" tabindex="-1">
+   <!-- 3.1 Hero -->
+   <section class="hero">
+    <div class="wrap hero-grid">
+     <div>
+      <p class="eyebrow fade-in">
+       Kirim. Putar. Bagikan. Cuan.
+      </p>
+      <h1>
+       Cuan dari
+       <br/>
+       <span>
+        WhatsApp kamu.
+       </span>
+      </h1>
+      <p class="rate fade-in">
+       <span>
+        <span class="js-rate">
+         Rp1.200
+        </span>
+        per pesan
+       </span>
+      </p>
+      <p class="rate-source" id="rateStatus" role="status">
+       Tarif terakhir
+      </p>
+      <p class="sub fade-in">
+       Tinggal scan, kirimnya otomatis.
+      </p>
+      <div class="ctas fade-in">
+       <a class="btn btn-primary js-register" href="/register">
+        Daftar gratis
+        <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.5" viewbox="0 0 24 24">
+         <path d="M5 12h14M13 6l6 6-6 6">
+         </path>
+        </svg>
+       </a>
+       <a class="btn btn-ghost" href="#video">
+        Tonton video
+       </a>
+      </div>
+      <p class="mini fade-in">
+       <span>
+        Gratis daftar
+       </span>
+       <span>
+        Bonus referral
+        <span class="js-ref">
+         Rp50
+        </span>
+       </span>
+       <span>
+        Tarik ke Bank &amp; E-Wallet
+       </span>
+      </p>
+     </div>
+     <div class="promo-stage fade-in" id="video">
+      <div class="film-heading">
+       <span>
+        <i>
+        </i>
+        CuanTerus / video promo
+       </span>
+       <span>
+        00:55
+       </span>
+      </div>
+      <div class="video-box">
+       <video aria-describedby="video-note" aria-label="Video promo CuanTerus, 55 detik" controls="" id="promo" loop="" muted="" playsinline="" poster="/landing/assets/promo-poster.jpg" preload="metadata">
+        <source src="/landing/assets/promo.mp4" type="video/mp4"/>
+        Browser kamu tidak mendukung video.
+        <a href="/landing/assets/promo.mp4">
+         Unduh video promo
+        </a>
+        .
+       </video>
+      </div>
+      <div class="film-footer">
+       <span>
+        Kirim. Putar. Bagikan.
+        <b>
+         Cuan.
+        </b>
+       </span>
+       <button aria-label="Aktifkan suara video" hidden="" id="soundToggle" type="button">
+        Aktifkan suara â
+       </button>
+      </div>
+      <p id="video-note">
+       Tampilan dan nominal dalam video adalah data demo. Tarif mengikuti pengaturan terbaru.
+      </p>
+      <p hidden="" id="videoError">
+       Video belum bisa dimuat.
+       <a href="/landing/assets/promo.mp4">
+        Buka video langsung â
+       </a>
+      </p>
+     </div>
+    </div>
+    <div class="wrap hero-strip">
+     <div>
+      <span class="strip-no">
+       MULAI
+      </span>
+      <strong>
+       Scan WhatsApp kamu.
+      </strong>
+      <span>
+       QR atau Pairing Code
+      </span>
+     </div>
+     <div>
+      <span class="strip-no">
+       KIRIM
+      </span>
+      <strong>
+       Kirimnya otomatis.
+      </strong>
+      <span>
+       Pantau langsung di dashboard
+      </span>
+     </div>
+     <div>
+      <span class="strip-no">
+       TARIK
+      </span>
+      <strong>
+       Cuan ke rekeningmu.
+      </strong>
+      <span>
+       Bank &amp; e-wallet Â· mulai Rp20.000
+      </span>
+     </div>
+     <a aria-label="Pelajari cara kerja" href="#cara-kerja">
+      Jelajahi
+      <br/>
+      <span>
+       â
+      </span>
+     </a>
+    </div>
+   </section>
+   <!-- 3.2 Cara kerja -->
+   <section class="sec" id="cara-kerja">
+    <div class="wrap">
+     <div class="sec-head reveal">
+      <div>
+       <p class="eyebrow">
+        Cara kerja
+       </p>
+       <h2>
+        Mulai dalam 3 langkah.
+       </h2>
+      </div>
+      <p class="lead">
+       Semua dari browser â HP atau laptop. Tidak perlu install aplikasi tambahan.
+      </p>
+     </div>
+     <div class="steps reveal stagger">
+      <article class="step">
+       <div class="n">
+        <svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="22">
+         <path d="M12 5v14M5 12h14">
+         </path>
+        </svg>
+       </div>
+       <h3>
+        Daftar gratis
+       </h3>
+       <p>
+        Isi username, email, password, dan nomor HP. Punya kode referral? Masukkan juga.
+       </p>
+      </article>
+      <article class="step">
+       <div class="n">
+        <svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="22">
+         <path d="M9 3H3v6M15 3h6v6M3 15v6h6M21 15v6h-6M8 8h8v8H8z">
+         </path>
+        </svg>
+       </div>
+       <h3>
+        Hubungkan WhatsApp
+       </h3>
+       <p>
+        Scan QR atau pakai Pairing Code, seperti login WhatsApp Web.
+       </p>
+      </article>
+      <article class="step">
+       <div class="n">
+        <svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewbox="0 0 24 24" width="22">
+         <path d="m3 3 18 9-18 9 4-9-4-9Zm4 9h14">
+         </path>
+        </svg>
+       </div>
+       <h3>
+        Mulai Kirim
+       </h3>
+       <p>
+        Tekan
+        <b>
+         Mulai Kirim
+        </b>
+        , pesan terkirim otomatis dan saldo kamu bertambah.
+       </p>
+      </article>
+     </div>
+    </div>
+    <div class="wrap dashboard-tour" id="dashboard-tour">
+     <div class="tour-bar">
+      <div>
+       <span aria-hidden="true" class="window-dots">
+        <i>
+        </i>
+        <i>
+        </i>
+        <i>
+        </i>
+       </span>
+       <span>
+        Dashboard CuanTerus
+       </span>
+      </div>
+      <span class="tour-tag">
+       Jelajahi fiturnya
+      </span>
+     </div>
+     <div aria-label="Pilih preview dashboard" class="dashboard-options" role="group">
+      <button aria-pressed="true" data-dashboard="sending" data-experience-control="" disabled="" type="button">
+       Sesi WhatsApp
+      </button>
+      <button aria-pressed="false" data-dashboard="stats" data-experience-control="" disabled="" type="button">
+       Statistik
+      </button>
+      <button aria-pressed="false" data-dashboard="withdraw" data-experience-control="" disabled="" type="button">
+       Referral
+      </button>
+      <button aria-pressed="false" data-dashboard="withdraw-real" data-experience-control="" disabled="" type="button">
+       Tarik saldo
+      </button>
+     </div>
+     <figure class="product-capture">
+      <a aria-label="Perbesar preview sesi WhatsApp" class="zoomable" href="/landing/assets/footage/sending.jpg" id="dashboardFull">
+       <img alt="Sesi WhatsApp aktif pada dashboard CuanTerus" height="720" id="dashboardImage" loading="lazy" src="/landing/assets/footage/sending.jpg" width="1280"/>
+       <span aria-hidden="true" class="zoom-cue">
+        â
+       </span>
+      </a>
+     </figure>
+     <div class="tour-description">
+      <p id="dashboardDescription">
+       Hubungkan nomor, lihat status sesi, lalu mulai mengirim dari satu tempat.
+      </p>
+      <a class="text-link" href="#video">
+       Tonton video lengkap â
+      </a>
+     </div>
+    </div>
+   </section>
+   <!-- 3.3 Penghasilan -->
+   <section class="sec" id="penghasilan">
+    <div class="wrap">
+     <div class="sec-head reveal">
+      <div>
+       <p class="eyebrow">
+        Penghasilan
+       </p>
+       <h2>
+        Hitungannya jelas.
+       </h2>
+      </div>
+      <p class="lead">
+       Pantau setiap pesan dan pendapatan kamu langsung dari dashboard.
+      </p>
+     </div>
+     <div class="earn-grid reveal stagger">
+      <article class="ecard">
+       <div class="ico">
+        <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z">
+         </path>
+        </svg>
+       </div>
+       <p class="val js-rate">
+        Rp1.200
+       </p>
+       <h3>
+        per pesan
+       </h3>
+       <p>
+        Setiap pesan dari sesi kamu yang
+        <span class="js-payout-qualifier">
+         masuk ke penerima
+        </span>
+        menambah saldo.
+       </p>
+      </article>
+      <article class="ecard">
+       <div class="ico">
+        <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+         <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2">
+         </path>
+         <circle cx="9" cy="7" r="4">
+         </circle>
+         <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75">
+         </path>
+        </svg>
+       </div>
+       <p class="val">
+        Bonus
+        <span class="js-ref">
+         Rp50
+        </span>
+       </p>
+       <h3>
+        referral
+       </h3>
+       <p>
+        Ajak teman pakai kode referral kamu. Setiap pesan mereka yang
+        <span class="js-payout-qualifier">
+         masuk ke penerima
+        </span>
+        , kamu dapat bonus.
+       </p>
+      </article>
+      <article class="ecard">
+       <div class="ico">
+        <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+         <path d="M3 3v18h18">
+         </path>
+         <path d="M7 15l4-4 3 3 5-6">
+         </path>
+        </svg>
+       </div>
+       <p class="val">
+        Real-time
+       </p>
+       <h3>
+        pantau penghasilan
+       </h3>
+       <p>
+        Lihat jumlah terkirim, penghasilan harian, dan grafik pendapatan 30 hari langsung dari dashboard.
+       </p>
+      </article>
+     </div>
+    </div>
+   </section>
+   <section class="sec simulation-section" id="simulasi">
+    <div class="wrap">
+     <div class="sec-head">
+      <div>
+       <p class="eyebrow">
+        Hitung dulu, baru mulai
+       </p>
+       <h2>
+        Geser angkanya.
+        <br/>
+        <span class="accent-text">
+         Lihat hitungannya.
+        </span>
+       </h2>
+      </div>
+      <p class="lead">
+       Pesan kamu dan bonus referral dihitung terpisah. Ubah jumlahnya, lihat hasilnya dengan tarif terbaru.
+      </p>
+     </div>
+     <div class="calculator">
+      <div class="calculator-inputs">
+       <noscript>
+        <p class="demo-note">
+         Aktifkan JavaScript untuk mengubah simulasi. Contoh hitungan di bawah tetap bisa dibaca.
+        </p>
+       </noscript>
+       <div class="calculator-heading">
+        <span class="chip">
+         Simulasi penghasilan
+        </span>
+        <span class="calculator-live" id="calculatorRateStatus">
+         Tarif terakhir
+        </span>
+       </div>
+       <div class="range-field">
+        <div>
+         <label for="messageCount">
+          Pesan dari sesi kamu
+         </label>
+         <output for="messageCount" id="messageCountValue">
+          100
+         </output>
+        </div>
+        <input data-experience-control="" disabled="" id="messageCount" max="1000" min="0" step="5" type="range" value="100"/>
+        <div aria-hidden="true" class="range-scale">
+         <span>
+          0 pesan
+         </span>
+         <span>
+          1.000 pesan
+         </span>
+        </div>
+        <p>
+         Setiap pesan yang
+         <span class="js-payout-qualifier">
+          masuk ke penerima
+         </span>
+         Ã
+         <span class="js-rate">
+          Rp1.200
+         </span>
+         .
+        </p>
+       </div>
+       <div class="range-field">
+        <div>
+         <label for="referralCount">
+          Pesan dari teman referral
+         </label>
+         <output for="referralCount" id="referralCountValue">
+          50
+         </output>
+        </div>
+        <input data-experience-control="" disabled="" id="referralCount" max="1000" min="0" step="5" type="range" value="50"/>
+        <div aria-hidden="true" class="range-scale">
+         <span>
+          0 pesan
+         </span>
+         <span>
+          1.000 pesan
+         </span>
+        </div>
+        <p>
+         Setiap pesan mereka yang
+         <span class="js-payout-qualifier">
+          masuk ke penerima
+         </span>
+         Ã
+         <span class="js-ref">
+          Rp50
+         </span>
+         .
+        </p>
+       </div>
+       <div aria-label="Coba jumlah pesan sesi" class="calculator-presets" role="group">
+        <span>
+         Coba hitung
+        </span>
+        <button data-experience-control="" data-message-preset="25" disabled="" type="button">
+         25 pesan
+        </button>
+        <button data-experience-control="" data-message-preset="100" disabled="" type="button">
+         100 pesan
+        </button>
+        <button data-experience-control="" data-message-preset="250" disabled="" type="button">
+         250 pesan
+        </button>
+       </div>
+      </div>
+      <div class="calculator-result">
+       <p class="eyebrow" id="calculatorResultLabel">
+        Hasil hitunganmu
+       </p>
+       <output aria-labelledby="calculatorResultLabel" aria-live="polite" for="messageCount referralCount" id="calculatedTotal">
+        Rp122.500
+       </output>
+       <dl>
+        <div>
+         <dt>
+          Dari sesi kamu
+         </dt>
+         <dd id="calculatedMessages">
+          Rp120.000
+         </dd>
+        </div>
+        <div>
+         <dt>
+          Bonus referral
+         </dt>
+         <dd id="calculatedReferral">
+          Rp2.500
+         </dd>
+        </div>
+       </dl>
+       <div class="threshold">
+        <meter aria-label="Hasil simulasi dibanding minimal penarikan" id="withdrawThreshold" max="20000" min="0" value="20000">
+        </meter>
+        <p id="thresholdText">
+         Melewati minimal penarikan Rp20.000 dalam simulasi ini.
+        </p>
+       </div>
+       <a class="btn btn-primary js-register" href="/register">
+        Mulai dari daftar gratis â
+       </a>
+       <p class="demo-note">
+        Simulasi, bukan janji penghasilan. Hasil nyata bergantung pada pesan yang memenuhi syarat dan tarif yang berlaku; bonus tidak mencakup hadiah event.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="sec payout-section" id="tarik-saldo">
+    <div class="wrap">
+     <div class="payout-heading">
+      <p class="eyebrow">
+       Dari dashboard ke akun pembayaranmu
+      </p>
+      <h2>
+       Dari pesan. Jadi saldo.
+       <br/>
+       <span class="accent-text">
+        Siap kamu tarik.
+       </span>
+      </h2>
+      <p class="lead">
+       Pilih tujuan, ajukan penarikan, dan pantau statusnya. Semua dari dashboard yang sama.
+      </p>
+     </div>
+     <div class="payout-facts">
+      <div>
+       <span>
+        Mulai penarikan dari
+       </span>
+       <strong>
+        Rp20.000
+       </strong>
+      </div>
+      <div>
+       <span>
+        Pilihan tujuan
+       </span>
+       <strong>
+        Bank &amp; e-wallet
+       </strong>
+      </div>
+      <div>
+       <span>
+        Pengajuan ditolak?
+       </span>
+       <strong>
+        Saldo kembali
+        <span aria-hidden="true">
+         â©
+        </span>
+       </strong>
+      </div>
+     </div>
+     <div class="payout-studio">
+      <div class="payout-guide">
+       <span class="chip">
+        Kenali alur penarikan
+       </span>
+       <h3>
+        Setiap status,
+        <br/>
+        jelas dari awal.
+       </h3>
+       <div aria-label="Jelajahi panduan status penarikan" class="payout-status-options" role="group">
+        <button aria-pressed="true" data-experience-control="" data-payout-step="request" disabled="" type="button">
+         Ajukan
+        </button>
+        <button aria-pressed="false" data-experience-control="" data-payout-step="pending" disabled="" type="button">
+         Menunggu
+        </button>
+        <button aria-pressed="false" data-experience-control="" data-payout-step="approved" disabled="" type="button">
+         Disetujui
+        </button>
+        <button aria-pressed="false" data-experience-control="" data-payout-step="rejected" disabled="" type="button">
+         Ditolak
+        </button>
+       </div>
+       <div class="payout-status-copy" role="status">
+        <span aria-hidden="true" id="payoutStatusIcon">
+         â
+        </span>
+        <h4 id="payoutStatusTitle">
+         Tentukan nominal dan tujuan.
+        </h4>
+        <p id="payoutStatusBody">
+         Simpan akun pembayaran, pilih tujuan, lalu isi nominal mulai Rp20.000 untuk mengajukan penarikan.
+        </p>
+       </div>
+       <p class="demo-note">
+        Ini panduan status, bukan pelacakan pengajuan akunmu.
+       </p>
+       <a class="text-link" href="/login">
+        Lihat riwayat penarikanmu â
+       </a>
+      </div>
+      <div class="payout-visual">
+       <div class="payout-visual-label">
+        <span class="eyebrow">
+         Tampilan penarikan di dashboard
+        </span>
+        <span aria-hidden="true">
+         â
+        </span>
+       </div>
+       <figure class="product-capture">
+        <a aria-label="Perbesar tampilan modal dan riwayat penarikan" class="zoomable" href="/landing/assets/footage/withdraw-real.jpg">
+         <img alt="Modal Tarik Saldo dan riwayat penarikan pada dashboard CuanTerus" height="720" loading="lazy" src="/landing/assets/footage/withdraw-real.jpg" width="1280"/>
+         <span aria-hidden="true" class="zoom-cue">
+          â
+         </span>
+        </a>
+       </figure>
+       <div class="refund-promise">
+        <span aria-hidden="true">
+         â©
+        </span>
+        <div>
+         <h3>
+          Ditolak? Saldo balik otomatis.
+         </h3>
+         <p>
+          Nominal pengajuan dikembalikan ke saldo CuanTerus saat status penarikan ditolak, lengkap dengan catatan transaksi.
+         </p>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="payment-section">
+      <div>
+       <p class="eyebrow">
+        Tujuan pembayaran
+       </p>
+       <h3>
+        Ke akun yang
+        <br/>
+        sudah kamu pakai.
+       </h3>
+       <p class="lead">
+        Pilih tujuan penarikanmu. Biaya admin Rp0 untuk semua bank dan e-wallet, ditanggung platform.
+       </p>
+       <div class="destination-detail" role="status">
+        <span id="destinationName">
+         BCA
+        </span>
+        <strong id="destinationFee">
+         Biaya admin Rp0
+        </strong>
+        <span class="fee-covered">
+         Ditanggung platform
+        </span>
+       </div>
+       <p class="note">
+        Diproses tim sesuai jam dan pemeriksaan akun. Jika transfer bermasalah setelah disetujui, laporkan melalui bantuan.
+       </p>
+      </div>
+      <div class="payment-picker">
+       <p class="wd-label">
+        Bank
+       </p>
+       <div class="payment-logos">
+        <button aria-label="Lihat biaya admin BCA" aria-pressed="true" data-destination="BCA" data-experience-control="" data-fee="0" disabled="" type="button">
+         <img alt="BCA" loading="lazy" src="/landing/assets/banks/bca.svg"/>
+        </button>
+        <button aria-label="Lihat biaya admin BNI" aria-pressed="false" data-destination="BNI" data-experience-control="" data-fee="0" disabled="" type="button">
+         <img alt="BNI" loading="lazy" src="/landing/assets/banks/bni.svg"/>
+        </button>
+        <button aria-label="Lihat biaya admin BRI" aria-pressed="false" data-destination="BRI" data-experience-control="" data-fee="0" disabled="" type="button">
+         <img alt="BRI" loading="lazy" src="/landing/assets/banks/bri.svg"/>
+        </button>
+        <button aria-label="Lihat biaya admin Mandiri" aria-pressed="false" data-destination="Mandiri" data-experience-control="" data-fee="0" disabled="" type="button">
+         <img alt="Mandiri" loading="lazy" src="/landing/assets/banks/mandiri.svg"/>
+        </button>
+        <button aria-label="Lihat biaya admin BSI" aria-pressed="false" data-destination="BSI" data-experience-control="" data-fee="0" disabled="" type="button">
+         <img alt="BSI" loading="lazy" src="/landing/assets/banks/bsi.svg"/>
+        </button>
+        <button aria-label="Lihat biaya admin CIMB Niaga" aria-pressed="false" data-destination="CIMB Niaga" data-experience-control="" data-fee="0" disabled="" type="button">
+         <img alt="CIMB Niaga" loading="lazy" src="/landing/assets/banks/cimb-niaga.svg"/>
+        </button>
+        <button aria-label="Lihat biaya admin Danamon" aria-pressed="false" data-destination="Danamon" data-experience-control="" data-fee="0" disabled="" type="button">
+         <img alt="Danamon" loading="lazy" src="/landing/assets/banks/danamon.svg"/>
+        </button>
+        <button aria-label="Lihat biaya admin Permata" aria-pressed="false" data-destination="Permata" data-experience-control="" data-fee="0" disabled="" type="button">
+         <img alt="Permata" loading="lazy" src="/landing/assets/banks/permata.svg"/>
+        </button>
+       </div>
+       <p class="wd-label">
+        E-wallet
+       </p>
+       <div class="payment-logos">
+        <button aria-label="Lihat biaya admin OVO" aria-pressed="false" data-destination="OVO" data-experience-control="" data-fee="0" disabled="" type="button">
+         <img alt="OVO" loading="lazy" src="/landing/assets/banks/ovo-wordmark.svg"/>
+        </button>
+        <button aria-label="Lihat biaya admin GoPay" aria-pressed="false" data-destination="GoPay" data-experience-control="" data-fee="0" disabled="" type="button">
+         <img alt="GoPay" loading="lazy" src="/landing/assets/banks/gopay.svg"/>
+        </button>
+        <button aria-label="Lihat biaya admin DANA" aria-pressed="false" data-destination="DANA" data-experience-control="" data-fee="0" disabled="" type="button">
+         <img alt="DANA" loading="lazy" src="/landing/assets/banks/dana.svg"/>
+        </button>
+        <button aria-label="Lihat biaya admin ShopeePay" aria-pressed="false" data-destination="ShopeePay" data-experience-control="" data-fee="0" disabled="" type="button">
+         <img alt="ShopeePay" loading="lazy" src="/landing/assets/banks/shopeepay.svg"/>
+        </button>
+       </div>
+       <p class="brand-credit">
+        Logo milik masing-masing penyedia menunjukkan pilihan tujuan penarikan. Biaya admin ditanggung platform.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+   <!-- 3.4 Spinwheel -->
+   <section class="sec" id="fitur">
+    <div class="wrap split">
+     <div class="reveal">
+      <p class="eyebrow">
+       Spinwheel
+      </p>
+      <span class="chip">
+       Fitur baru
+      </span>
+      <h2>
+       Putar Spinwheel.
+       <br/>
+       Ada tiket? Gas putar.
+      </h2>
+      <p class="lead" style="margin-top:18px">
+       Dapatkan tiket dari event, turnamen, atau kode redeem. Kalau mendapat hadiah uang, saldonya langsung bertambah.
+      </p>
+      <ul class="points">
+       <li>
+        <span aria-hidden="true">
+         ðï¸
+        </span>
+        <p>
+         Tiket dari
+         <b>
+          Event Dadakan
+         </b>
+         , hadiah
+         <b>
+          turnamen
+         </b>
+         , dan
+         <b>
+          kode redeem
+         </b>
+         yang dibagikan di channel Telegram.
+        </p>
+       </li>
+       <li>
+        <span aria-hidden="true">
+         ð°
+        </span>
+        <p>
+         Hadiah uang langsung masuk saldo â bisa ditarik seperti penghasilan biasa.
+        </p>
+       </li>
+       <li>
+        <span aria-hidden="true">
+         â³
+        </span>
+        <p>
+         Setiap tiket punya masa berlaku, jadi jangan disimpan terlalu lama.
+        </p>
+       </li>
+      </ul>
+      <p class="micro">
+       Pantau
+       <a class="js-tg" href="https://t.me/cuannteruscom" rel="noopener" target="_blank">
+        channel Telegram
+       </a>
+       biar nggak ketinggalan kode &amp; event.
+      </p>
+     </div>
+     <div class="spin-demo reveal">
+      <div class="demo-top">
+       <span class="eyebrow">
+        Coba dulu, gratis
+       </span>
+       <span class="demo-badge">
+        Simulasi
+       </span>
+      </div>
+      <h3>
+       Rasakan serunya putaran pertama.
+      </h3>
+      <div class="try-wheel" id="wheelWrap">
+       <svg aria-label="Demo Spinwheel dengan segmen saldo, tiket, dan zonk" id="demoWheel" role="img" viewbox="0 0 400 400">
+       </svg>
+      </div>
+      <noscript>
+       <p class="demo-note">
+        Aktifkan JavaScript untuk mencoba roda. Kamu tetap bisa melihat fitur lain dan daftar.
+       </p>
+      </noscript>
+      <button class="btn btn-primary" disabled="" id="spinButton" type="button">
+       Coba putar sekarang â
+      </button>
+      <p id="spinResult" role="status">
+       Coba sepuasnya. Tanpa login, tanpa tiket.
+      </p>
+      <p class="demo-note">
+       Simulasi tanpa hadiah atau saldo asli. Di aplikasi, hasil ditentukan server; segmen, peluang, dan hadiah mengikuti roda yang aktif. Bisa mendapat Zonk.
+      </p>
+      <a class="micro js-register" href="/register">
+       Mau putar dengan tiket asli? Daftar gratis â
+      </a>
+     </div>
+    </div>
+   </section>
+   <section class="sec share-section" id="bagikan">
+    <div class="wrap">
+     <div class="sec-head reveal">
+      <div>
+       <p class="eyebrow">
+        Bagikan pencapaian
+       </p>
+       <span class="chip">
+        Dari dashboard ke sosmed
+       </span>
+       <h2>
+        Cuanmu jadi cerita.
+        <br/>
+        <span style="color:var(--money)">
+         Referral ikut menyebar.
+        </span>
+       </h2>
+      </div>
+      <p class="lead">
+       Satu kartu. Angka pencapaianmu, grafik, kode referral, dan QR daftar â siap dibagikan.
+      </p>
+     </div>
+     <div class="share-showcase reveal">
+      <div class="card-preview">
+       <div aria-label="Contoh kartu pencapaian" class="card-options" role="group">
+        <button aria-pressed="true" data-card="both" disabled="" type="button">
+         Pendapatan &amp; kirim
+        </button>
+        <button aria-pressed="false" data-card="sent" disabled="" type="button">
+         Total kirim
+        </button>
+       </div>
+       <a aria-label="Buka contoh kartu pendapatan dan kirim ukuran penuh di tab baru" class="card-image-link" href="/landing/assets/footage/card-both.png" id="cardFull" rel="noopener" target="_blank">
+        <img alt="Contoh kartu: pendapatan Rp7.971.450, 7.057 pesan; data demo" height="1350" id="cardPreview" loading="lazy" src="/landing/assets/footage/card-both.png" width="1080"/>
+       </a>
+       <p class="caption">
+        <a download="contoh-kartu-cuanterus.png" href="/landing/assets/footage/card-both.png" id="cardDownload">
+         Unduh contoh kartu
+        </a>
+       </p>
+      </div>
+      <div class="share-instructions">
+       <span class="eyebrow">
+        Tampilan kartu asli aplikasi
+       </span>
+       <h3>
+        Bagikan pencapaian.
+        <br/>
+        Ajak teman mulai cuan.
+       </h3>
+       <ol class="share-steps">
+        <li>
+         <b>
+          Pilih angka yang mau kamu ceritakan.
+         </b>
+         <span>
+          Hari ini, 7 hari, 30 hari, atau semua. Pendapatan, total kirim, atau keduanya.
+         </span>
+        </li>
+        <li>
+         <b>
+          Bagikan ke tempat temanmu berkumpul.
+         </b>
+         <span>
+          WhatsApp, Telegram, Facebook, X. Unduh gambar untuk Story Instagram.
+         </span>
+        </li>
+        <li>
+         <b>
+          Teman scan QR. Kode kamu ikut.
+         </b>
+         <span>
+          Teman yang daftar lewat kodemu bisa memberi bonus
+          <span class="js-ref">
+           Rp50
+          </span>
+          per pesan yang
+          <span class="js-payout-qualifier">
+           masuk ke penerima
+          </span>
+          .
+         </span>
+        </li>
+       </ol>
+       <p class="privacy-note">
+        Nomor WhatsApp &amp; rekening tidak ditampilkan. Username bisa disembunyikan.
+       </p>
+       <a class="btn btn-primary js-register" href="/register">
+        Buat kartu cuanmu sendiri â
+       </a>
+       <p class="demo-note">
+        Kartu contoh memakai data demo, bukan janji penghasilan. Dibuat dengan renderer yang sama dengan aplikasi.
+       </p>
+      </div>
+     </div>
+     <div class="share-footage reveal">
+      <div>
+       <span class="eyebrow">
+        Lihat fiturnya langsung
+       </span>
+       <h3>
+        Begini tampilan
+        <br/>
+        Bagikan Pencapaian.
+       </h3>
+       <p class="lead">
+        Pilihan periode, preview kartu, dan tombol bagikan mengikuti tampilan produk pada video promo.
+       </p>
+      </div>
+      <figure class="product-capture">
+       <video aria-label="Cuplikan fitur Bagikan Pencapaian" controls="" id="shareVideo" muted="" playsinline="" poster="/landing/assets/footage/share.jpg" preload="none">
+        <source src="/landing/assets/footage/share.mp4" type="video/mp4"/>
+       </video>
+       <p class="video-error" hidden="" id="shareVideoError">
+        Video belum bisa dimuat.
+        <a href="/landing/assets/footage/share.mp4">
+         Buka video langsung
+        </a>
+        .
+       </p>
+      </figure>
+     </div>
+    </div>
+   </section>
+   <!-- 3.6 Turnamen -->
+   <section class="sec" id="turnamen">
+    <div class="wrap">
+     <div class="tour reveal">
+      <div style="position:relative">
+       <p class="eyebrow">
+        Turnamen
+       </p>
+       <h2>
+        Ikut turnamen.
+        <br/>
+        Rebut hadiahnya.
+       </h2>
+       <p class="lead" style="margin-top:18px">
+        Bersaing di papan peringkat dengan member lain. Hadiahnya bisa berupa saldo dan/atau tiket Spinwheel.
+       </p>
+       <p class="note">
+        Jadwal dan hadiah turnamen diumumkan di dashboard &amp; channel Telegram.
+       </p>
+      </div>
+      <figure class="product-capture">
+       <a aria-label="Perbesar Papan peringkat turnamen dari video promo" class="zoomable" href="/landing/assets/footage/tour-board.jpg">
+        <img alt="Papan peringkat turnamen dari video promo" loading="lazy" src="/landing/assets/footage/tour-board.jpg"/>
+        <span aria-hidden="true" class="zoom-cue">
+         â
+        </span>
+       </a>
+      </figure>
+     </div>
+    </div>
+   </section>
+   <section class="sec community-section" id="komunitas">
+    <div class="wrap">
+     <div class="sec-head">
+      <div>
+       <p class="eyebrow">
+        Tetap terhubung
+       </p>
+       <h2>
+        Info baru, langsung tahu.
+        <br/>
+        <span class="accent-text">
+         Ada kendala? Tanya tim.
+        </span>
+       </h2>
+      </div>
+      <p class="lead">
+       Satu tempat untuk mengikuti event. Satu jalur untuk meminta bantuan akun dan penarikan.
+      </p>
+     </div>
+     <div class="community-grid">
+      <a class="community-card js-tg" href="https://t.me/cuannteruscom" rel="noopener" target="_blank">
+       <span aria-hidden="true" class="community-icon">
+        â
+       </span>
+       <span class="eyebrow">
+        Channel Telegram
+       </span>
+       <h3>
+        Kode, event,
+        <br/>
+        dan kabar terbaru.
+       </h3>
+       <p>
+        Pantau pengumuman turnamen, event dadakan, dan kode redeem tiket Spinwheel.
+       </p>
+       <span class="community-cta">
+        Buka channel
+        <span aria-hidden="true">
+         â
+        </span>
+       </span>
+      </a>
+      <a class="community-card support-card" href="https://t.me/cuannnterusbot" rel="noopener" target="_blank">
+       <span aria-hidden="true" class="community-icon">
+        â³
+       </span>
+       <span class="eyebrow">
+        Bantuan akun
+       </span>
+       <h3>
+        Butuh bantuan?
+        <br/>
+        Hubungi admin.
+       </h3>
+       <p>
+        Tanyakan kendala akun atau laporkan transfer yang perlu diperiksa tim.
+       </p>
+       <span class="community-cta">
+        Hubungi admin
+        <span aria-hidden="true">
+         â
+        </span>
+       </span>
+      </a>
+     </div>
+    </div>
+   </section>
+   <!-- 3.8 FAQ -->
+   
+<section class="sec message-editor-section" id="edit-pesan">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow">FITUR PESAN</p>
+        <h2>Edit pesan sebelum dikirim</h2>
+      </div>
+      <p class="lead">Tulis pesan, perbaiki isi atau personalisasikan teksnya terlebih dahulu sebelum kamu menyalinnya untuk dikirim.</p>
+    </div>
+    <div class="message-editor motion-surface">
+      <label for="messageDraft">Pesan kamu</label>
+      <textarea id="messageDraft" rows="5" maxlength="5000" placeholder="Tulis pesan yang ingin kamu kirim di sini...">Halo! Apa kabar? Saya ingin berbagi informasi ini dengan kamu.</textarea>
+      <div class="message-editor-meta"><span id="messageCount">0 karakter</span><span>Edit teksnya sesuka kamu sebelum dikirim.</span></div>
+      <div class="message-editor-actions">
+        <button class="btn btn-primary" type="button" id="saveMessageEdit">Simpan edit</button>
+        <button class="btn btn-ghost" type="button" id="resetMessageEdit">Kembalikan contoh</button>
+        <button class="btn btn-ghost" type="button" id="copyEditedMessage">Salin pesan</button>
+      </div>
+      <div class="message-preview" aria-live="polite">
+        <div class="message-preview-title"><span class="message-preview-dot"></span> Pratinjau pesan</div>
+        <p id="messagePreview">Halo! Apa kabar? Saya ingin berbagi informasi ini dengan kamu.</p>
+      </div>
+      <p class="message-editor-status" id="messageEditorStatus" role="status">Perubahan akan terlihat di pratinjau. Fitur ini mengedit dan menyalin teks, belum mengirim pesan secara otomatis.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="faq">
+    <div class="wrap faq">
+     <div class="reveal">
+      <p class="eyebrow">
+       FAQ
+      </p>
+      <h2>
+       Pertanyaan yang sering ditanya.
+      </h2>
+      <p class="lead">
+       Kenali cara hitung, tiket, dan penarikan sebelum mulai.
+      </p>
+      <a class="text-link js-tg" href="https://t.me/cuannteruscom" rel="noopener" target="_blank">
+       Buka channel Telegram â
+      </a>
+     </div>
+     <div class="faq-answers reveal">
+      <div aria-label="Pilih topik pertanyaan" class="faq-filters" role="group">
+       <button aria-pressed="true" data-experience-control="" data-faq-filter="all" disabled="" type="button">
+        Semua
+       </button>
+       <button aria-pressed="false" data-experience-control="" data-faq-filter="start" disabled="" type="button">
+        Mulai
+       </button>
+       <button aria-pressed="false" data-experience-control="" data-faq-filter="earn" disabled="" type="button">
+        Penghasilan
+       </button>
+       <button aria-pressed="false" data-experience-control="" data-faq-filter="withdraw" disabled="" type="button">
+        Penarikan
+       </button>
+       <button aria-pressed="false" data-experience-control="" data-faq-filter="features" disabled="" type="button">
+        Fitur
+       </button>
+      </div>
+      <p class="sr-only" id="faqCount" role="status">
+      </p>
+      <details data-faq-category="start" open="">
+       <summary>
+        <span class="summary-label">
+         Daftarnya bayar?
+        </span>
+        <span aria-hidden="true" class="pm">
+         +
+        </span>
+       </summary>
+       <div class="ans">
+        <p>
+         Tidak. Daftar CuanTerus gratis.
+        </p>
+       </div>
+      </details>
+      <details data-faq-category="earn">
+       <summary>
+        <span class="summary-label">
+         Bagaimana bayarannya dihitung?
+        </span>
+        <span aria-hidden="true" class="pm">
+         +
+        </span>
+       </summary>
+       <div class="ans">
+        <p>
+         Kamu dapat
+         <span class="js-rate">
+          Rp1.200
+         </span>
+         untuk setiap pesan dari sesi kamu yang berhasil
+         <span class="js-payout-qualifier">
+          masuk ke penerima
+         </span>
+         . Semua angka bisa dipantau di dashboard.
+        </p>
+       </div>
+      </details>
+      <details data-faq-category="start">
+       <summary>
+        <span class="summary-label">
+         Berapa nomor WhatsApp yang bisa dihubungkan?
+        </span>
+        <span aria-hidden="true" class="pm">
+         +
+        </span>
+       </summary>
+       <div class="ans">
+        <p>
+         Secara default hingga 5 sesi per akun.
+        </p>
+       </div>
+      </details>
+      <details data-faq-category="start">
+       <summary>
+        <span class="summary-label">
+         Kapan sesi bisa berjalan?
+        </span>
+        <span aria-hidden="true" class="pm">
+         +
+        </span>
+       </summary>
+       <div class="ans">
+        <p>
+         Sesi berjalan di jam operasional â saat ini 10:00â20:00 WIB. Di luar jam itu sesi otomatis dijeda dan aktif lagi keesokan harinya.
+        </p>
+       </div>
+      </details>
+      <details data-faq-category="withdraw">
+       <summary>
+        <span class="summary-label">
+         Berapa minimal penarikan, dan ada biayanya?
+        </span>
+        <span aria-hidden="true" class="pm">
+         +
+        </span>
+       </summary>
+       <div class="ans">
+        <p>
+         Minimal Rp20.000. Biaya admin Rp0 untuk semua tujuan bank dan e-wallet karena ditanggung platform.
+        </p>
+       </div>
+      </details>
+      <details data-faq-category="earn">
+       <summary>
+        <span class="summary-label">
+         Bagaimana cara dapat bonus referral?
+        </span>
+        <span aria-hidden="true" class="pm">
+         +
+        </span>
+       </summary>
+       <div class="ans">
+        <p>
+         Bagikan link atau kode referral kamu (ada di menu Penghasilan, atau langsung di kartu Bagikan Pencapaian). Setiap pesan dari teman yang daftar pakai kodemu memberi kamu bonus
+         <span class="js-ref">
+          Rp50
+         </span>
+         .
+        </p>
+       </div>
+      </details>
+      <details data-faq-category="features">
+       <summary>
+        <span class="summary-label">
+         Dari mana tiket Spinwheel?
+        </span>
+        <span aria-hidden="true" class="pm">
+         +
+        </span>
+       </summary>
+       <div class="ans">
+        <p>
+         Dari Event Dadakan, hadiah turnamen, dan kode redeem yang dibagikan di channel Telegram. Tiket punya masa berlaku.
+        </p>
+       </div>
+      </details>
+      <details data-faq-category="withdraw">
+       <summary>
+        <span class="summary-label">
+         Kalau penarikan ditolak, saldonya bagaimana?
+        </span>
+        <span aria-hidden="true" class="pm">
+         +
+        </span>
+       </summary>
+       <div class="ans">
+        <p>
+         Nominal pengajuan otomatis kembali ke saldo CuanTerus ketika penarikan berstatus ditolak. Kalau transfer bermasalah setelah disetujui, laporkan melalui bantuan agar diperiksa tim.
+        </p>
+       </div>
+      </details>
+      <details data-faq-category="start">
+       <summary>
+        <span class="summary-label">
+         Lupa password?
+        </span>
+        <span aria-hidden="true" class="pm">
+         +
+        </span>
+       </summary>
+       <div class="ans">
+        <p>
+         Pakai menu
+         <i>
+          Lupa Password
+         </i>
+         di halaman masuk. Kamu akan diminta mencocokkan akun pembayaran yang tersimpan, jadi simpan akun pembayaran di Profil sejak awal.
+        </p>
+       </div>
+      </details>
+     </div>
+    </div>
+   </section>
+   <section class="final" id="daftar">
+    <div class="wrap">
+     <div class="closing-card reveal">
+      <div>
+       <span class="eyebrow">
+        Giliran kamu mulai.
+       </span>
+       <h2>
+        WhatsApp sudah ada.
+        <br/>
+        <span>
+         Tinggal mulai cuannya.
+        </span>
+       </h2>
+       <p>
+        Daftar gratis. Hubungkan WhatsApp.
+        <br/>
+        Pantau pesan dan saldo dari satu dashboard.
+       </p>
+       <div class="closing-perks">
+        <span>
+         â Gratis daftar
+        </span>
+        <span>
+         â Bonus referral
+        </span>
+        <span>
+         â Tarik mulai Rp20.000
+        </span>
+       </div>
+      </div>
+      <div class="closing-action">
+       <div class="closing-rate">
+        <span class="js-rate">
+         Rp1.200
+        </span>
+        <small>
+         per pesan
+        </small>
+       </div>
+       <p>
+        Saldo bertambah untuk pesan
+        <br/>
+        yang
+        <span class="js-payout-qualifier">
+         masuk ke penerima
+        </span>
+        .
+       </p>
+       <a class="btn btn-primary js-register" href="/register">
+        Daftar gratis sekarang â
+       </a>
+       <a class="closing-login" href="/login">
+        Sudah punya akun? Masuk â
+       </a>
+       <span class="closing-url">
+        cuannnterus1.com
+       </span>
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+  <!-- 3.10 Footer -->
+  <footer>
+   <div class="wrap footer-grid">
+    <div class="footer-brand">
+     <a aria-label="CuanTerus â beranda" class="logo" href="#top" style="color:var(--brand)">
+      <svg aria-hidden="true">
+       <use href="#ct-symbol">
+       </use>
+      </svg>
+      <span class="wm" style="color:var(--text)">
+       <b>
+        C
+       </b>
+       uan
+       <b>
+        T
+       </b>
+       erus
+      </span>
+     </a>
+     <p>
+      Kirim. Putar.
+      <br/>
+      Bagikan. Cuan.
+     </p>
+     <a class="text-link js-register" href="/register">
+      Mulai gratis â
+     </a>
+    </div>
+    <nav aria-label="Mulai">
+     <h3>
+      Mulai
+     </h3>
+     <a href="#cara-kerja">
+      Cara kerja
+     </a>
+     <a href="#simulasi">
+      Hitung cuan
+     </a>
+     <a href="/login">
+      Masuk
+     </a>
+     <a class="js-register" href="/register">
+      Daftar gratis
+     </a>
+    </nav>
+    <nav aria-label="Jelajahi fitur">
+     <h3>
+      Jelajahi
+     </h3>
+     <a href="#tarik-saldo">
+      Tarik saldo
+     </a>
+     <a href="#fitur">
+      Spinwheel
+     </a>
+     <a href="#bagikan">
+      Bagikan pencapaian
+     </a>
+     <a href="#turnamen">
+      Turnamen
+     </a>
+    </nav>
+    <nav aria-label="Dukungan">
+     <h3>
+      Bantuan
+     </h3>
+     <a href="#faq">
+      FAQ
+     </a>
+     <a href="#komunitas">
+      Komunitas &amp; bantuan
+     </a>
+     <a class="js-tg" href="https://t.me/cuannteruscom" rel="noopener" target="_blank">
+      Channel Telegram â
+     </a>
+     <a href="https://t.me/cuannnterusbot" rel="noopener" target="_blank">
+      Hubungi admin â
+     </a>
+    </nav>
+   </div>
+   <div class="wrap footer-meta">
+    <p class="copy">
+     Â© 2026 CuanTerus
+    </p>
+    <a href="#top">
+     Kembali ke atas â
+    </a>
+    <div class="motion-tools" hidden="">
+     <button id="motionToggle" type="button">
+      <span aria-hidden="true" class="motion-icon">
+       â¡
+      </span>
+      <span id="motionLabel">
+       Jeda animasi
+      </span>
+     </button>
+    </div>
+   </div>
+  </footer>
+  <dialog aria-labelledby="menuTitle" class="site-menu" id="siteMenu">
+   <div class="site-menu-top">
+    <h2 id="menuTitle">
+     Jelajahi CuanTerus
+    </h2>
+    <form method="dialog">
+     <button aria-label="Tutup menu navigasi" class="menu-toggle">
+      Ã
+     </button>
+    </form>
+   </div>
+   <nav aria-label="Navigasi mobile">
+    <a href="#cara-kerja">
+     Cara kerja
+     <span aria-hidden="true">
+      â
+     </span>
+    </a>
+    <a href="#simulasi">
+     Hitung cuan
+     <span aria-hidden="true">
+      â
+     </span>
+    </a>
+    <a href="#tarik-saldo">
+     Tarik saldo
+     <span aria-hidden="true">
+      â
+     </span>
+    </a>
+    <a href="#fitur">
+     Spinwheel
+     <span aria-hidden="true">
+      â
+     </span>
+    </a>
+    <a href="#bagikan">
+     Bagikan pencapaian
+     <span aria-hidden="true">
+      â
+     </span>
+    </a>
+    <a href="#komunitas">
+     Komunitas &amp; bantuan
+     <span aria-hidden="true">
+      â
+     </span>
+    </a>
+    <a href="#faq">
+     FAQ
+     <span aria-hidden="true">
+      â
+     </span>
+    </a>
+   </nav>
+   <a class="btn btn-primary js-register" href="/register">
+    Daftar gratis sekarang â
+   </a>
+   <a class="text-link" href="/login">
+    Sudah punya akun? Masuk
+   </a>
+  </dialog>
+  <dialog aria-labelledby="mediaTitle" class="media-dialog" id="mediaDialog">
+   <div class="media-dialog-bar">
+    <h2 id="mediaTitle">
+     Tampilan dashboard
+    </h2>
+    <form method="dialog">
+     <button aria-label="Tutup gambar ukuran penuh" class="btn btn-ghost">
+      Tutup
+      <span aria-hidden="true">
+       Ã
+      </span>
+     </button>
+    </form>
+   </div>
+   <img alt="" id="mediaImage"/>
+  </dialog>
+  <script defer="" src="/landing/assets/js/motion.js?v=native-footer">
+  </script>
+  <script defer="" src="/landing/assets/js/smooth-scroll.js?v=native-anchors">
+  </script>
+  <script defer="" src="/landing/assets/js/experience.js?v=platform-fees">
+  </script>
+  <script defer="" src="/landing/assets/js/rates.js">
+  </script>
+  <script>
+   (() => {
+  const motionPreference = matchMedia('(prefers-reduced-motion: reduce)');
+
+  // Â§5 â teruskan ?ref=KODE ke semua tombol Daftar
+  const ref = new URLSearchParams(location.search).get('ref');
+  if (ref && /^[A-Fa-f0-9]{8}$/.test(ref)) {
+    document.querySelectorAll('.js-register').forEach(a => {
+      const u = new URL(a.href); u.searchParams.set('ref', ref.toUpperCase()); a.href = u.toString();
+    });
+  }
+
+  // Native controls remain available on every screen, including autoplay rejection.
+  const v = document.getElementById('promo');
+  const sound = document.getElementById('soundToggle');
+  sound.hidden = false;
+  const syncSound = () => {
+    sound.textContent = v.muted ? 'Aktifkan suara â' : 'Matikan suara â';
+    sound.setAttribute('aria-label', v.muted ? 'Aktifkan suara video' : 'Matikan suara video');
+  };
+  sound.addEventListener('click', () => {
+    v.muted = !v.muted;
+    if (v.paused) v.play().catch(() => {});
+    syncSound();
+  });
+  v.addEventListener('volumechange', syncSound);
+  const promoError = () => {
+    document.getElementById('videoError').hidden = false;
+    sound.hidden = true;
+  };
+  v.addEventListener('error', promoError);
+  v.querySelector('source').addEventListener('error', promoError);
+  document.querySelectorAll('[data-card]').forEach(button => {
+    button.disabled = false;
+    button.addEventListener('click', () => {
+      const kind = button.dataset.card;
+      const path = `/landing/assets/footage/card-${kind}.png`;
+      document.getElementById('cardPreview').src = path;
+      window.CuanTerusMotion?.cardChanged(document.getElementById('cardPreview'));
+      document.getElementById('cardPreview').alt = kind === 'sent'
+        ? 'Contoh kartu total kirim: 7.057 pesan; data demo'
+        : 'Contoh kartu: pendapatan Rp7.971.450, 7.057 pesan; data demo';
+      const full = document.getElementById('cardFull');
+      full.href = path;
+      full.setAttribute('aria-label', `Buka contoh kartu ${kind === 'sent' ? 'total kirim' : 'pendapatan dan kirim'} ukuran penuh di tab baru`);
+      document.getElementById('cardDownload').href = path;
+      document.querySelectorAll('[data-card]').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
+    });
+  });
+  const shareVideo = document.getElementById('shareVideo');
+  const shareError = () => { document.getElementById('shareVideoError').hidden = false; };
+  shareVideo.addEventListener('error', shareError);
+  shareVideo.querySelector('source').addEventListener('error', shareError);
+
+  // Demo ports geometry, palette and quartic easing from components/SpinWheel.vue.
+  // No account API calls, tickets or money: outcomes are local and illustrative.
+  const svg = document.getElementById('demoWheel');
+  const segments = ['Saldo', 'Tiket', 'Zonk', 'Saldo', 'Tiket', 'Zonk', 'Saldo', 'Tiket'];
+  const palette = ['#f97316','#7c3aed','#1e293b','#4f46e5','#ea580c','#334155','#eab308','#4338ca'];
+  const point = (deg,r=178) => [200+r*Math.sin(deg*Math.PI/180),200-r*Math.cos(deg*Math.PI/180)];
+  let paths = '';
+  segments.forEach((label,i) => {
+    const a=point(i*45),b=point((i+1)*45);
+    paths += `<path d="M200 200 L${a} A178 178 0 0 1 ${b} Z" fill="${palette[i]}" stroke="#140d24" stroke-width="2"/><g transform="rotate(${i*45+22.5} 200 200)"><text x="200" y="50" text-anchor="middle" font-size="24">${label==='Saldo'?'ð°':label==='Tiket'?'ðï¸':'ð'}</text><text x="200" y="116" text-anchor="middle" fill="${[0,4,6].includes(i)?'#0d0a18':'#ffffff'}" font-weight="800" font-size="16" transform="rotate(-90 200 116)">${label}</text></g>`;
+  });
+  svg.innerHTML = `<defs><linearGradient id="demoRim"><stop stop-color="#fbbf24"/><stop offset=".5" stop-color="#7c3aed"/><stop offset="1" stop-color="#f97316"/></linearGradient><radialGradient id="demoHub"><stop stop-color="#fde68a"/><stop offset=".6" stop-color="#f59e0b"/><stop offset="1" stop-color="#b45309"/></radialGradient></defs><circle cx="200" cy="200" r="192" fill="url(#demoRim)"/><circle cx="200" cy="200" r="182" fill="#140d24"/><g id="demoRotor">${paths}</g>`;
+  for(let k=1;k<=24;k++){const [x,y]=point(k*15,187);svg.innerHTML+=`<circle class="wheel-light" cx="${x}" cy="${y}" r="4.5" fill="#fde68a"/>`;}
+  svg.innerHTML += '<circle cx="200" cy="200" r="30.26" fill="url(#demoHub)" stroke="#fff7ed" stroke-width="3"/><text x="200" y="206" text-anchor="middle" fill="#451a03" font-weight="900" font-size="18">SPIN</text><path d="M184 6 L216 6 L200 46 Z" fill="#fff7ed" stroke="#b45309" stroke-width="3" stroke-linejoin="round"/><circle cx="200" cy="12" r="5" fill="#f97316"/>';
+  const rotor=document.getElementById('demoRotor'),button=document.getElementById('spinButton'),result=document.getElementById('spinResult');
+  let angle=0, spinning=false, idleVisible=false, idleFrameId=0, idleLast=0;
+  const canMove = () => !motionPreference.matches && document.documentElement.dataset.motion === 'running';
+  const idleTick = now => {
+    idleFrameId = 0;
+    if (!idleVisible || !canMove() || document.hidden) { idleLast = 0; return; }
+    if (!spinning && idleLast) {
+      angle = (angle + Math.min(now-idleLast,100)*.006)%360;
+      rotor.setAttribute('transform', `rotate(${angle} 200 200)`);
+    }
+    idleLast=now; idleFrameId=requestAnimationFrame(idleTick);
+  };
+  const resumeIdle = () => { if (!idleFrameId && idleVisible && canMove() && !document.hidden) idleFrameId=requestAnimationFrame(idleTick); };
+  new IntersectionObserver(([entry]) => { idleVisible=entry.isIntersecting; if (idleVisible) resumeIdle(); }, {threshold:.15}).observe(svg);
+  document.addEventListener('cuanterus:motion', resumeIdle);
+  document.addEventListener('visibilitychange', resumeIdle);
+  motionPreference.addEventListener('change', resumeIdle);
+  button.disabled = false;
+  button.addEventListener('click',()=>{
+    if(button.disabled)return;
+    spinning=true;button.disabled=true;button.textContent='Rodanya lagi berputarâ¦';result.textContent='Ini simulasi. Tidak memakai tiket atau saldo akun.';
+    const random=new Uint32Array(1);crypto.getRandomValues(random);const idx=random[0]%segments.length;
+    const centre=idx*45+22.5,from=angle,delta=(((-centre-from)%360)+360)%360,to=from+360*7+delta,duration=5600,t0=performance.now();
+    function frame(now){
+      const p=canMove()?Math.min(1,(now-t0)/duration):1;
+      angle=from+(to-from)*(1-Math.pow(1-p,4));
+      rotor.setAttribute('transform',`rotate(${angle} 200 200)`);
+      if(p<1)requestAnimationFrame(frame);
+      else {
+        angle=to%360;spinning=false;button.disabled=false;button.textContent='Coba putar lagi â»';
+        result.textContent=segments[idx]==='Zonk'?'Hasil demo: Zonk. Coba lagi, yuk!':`Hasil demo: ${segments[idx]}. Tidak ada hadiah atau saldo asli.`;
+        window.CuanTerusMotion?.celebrate(document.querySelector('.spin-demo'));
+      }
+    }
+    if (!canMove()) frame(t0 + duration);
+    else requestAnimationFrame(frame);
+  });
+
+})();
+  
+  // Editor demo: edit, preview, reset, and copy a message before sending.
+  (() => {
+    const draft = document.getElementById('messageDraft');
+    if (!draft) return;
+    const preview = document.getElementById('messagePreview');
+    const count = document.getElementById('messageCount');
+    const status = document.getElementById('messageEditorStatus');
+    const initial = draft.value;
+    const updatePreview = () => {
+      preview.textContent = draft.value || 'Pratinjau pesan akan muncul di sini.';
+      count.textContent = `${draft.value.length} karakter`;
+    };
+    draft.addEventListener('input', () => {
+      updatePreview();
+      status.textContent = 'Pesan sedang diedit. Tekan “Simpan edit” untuk menandai perubahan selesai.';
+    });
+    document.getElementById('saveMessageEdit').addEventListener('click', () => {
+      updatePreview();
+      status.textContent = 'Edit pesan tersimpan di pratinjau. Kamu bisa menyalin teks untuk digunakan saat mengirim.';
+    });
+    document.getElementById('resetMessageEdit').addEventListener('click', () => {
+      draft.value = initial;
+      updatePreview();
+      status.textContent = 'Pesan contoh dikembalikan.';
+    });
+    document.getElementById('copyEditedMessage').addEventListener('click', async () => {
+      if (!draft.value.trim()) {
+        status.textContent = 'Tulis pesan terlebih dahulu sebelum menyalin.';
+        draft.focus();
+        return;
+      }
+      try {
+        await navigator.clipboard.writeText(draft.value);
+        status.textContent = 'Pesan berhasil disalin. Tempelkan ke tempat kamu akan mengirim pesan.';
+      } catch (error) {
+        draft.focus();
+        draft.select();
+        status.textContent = 'Salin otomatis tidak tersedia di browser ini. Tekan lama teks yang dipilih lalu pilih Salin.';
+      }
+    });
+    updatePreview();
+  })();
+
+</script>
+ </body>
+</html>
